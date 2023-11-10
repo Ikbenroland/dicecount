@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Counter - Your Dice Tracker</title>
-    <style>
+     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f0f0f0;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
         }
@@ -24,11 +24,24 @@
             margin: 0;
         }
 
-        #app-description {
+        #app-container {
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Place children elements with space in between */
+            align-items: center; /* Vertically center elements */
             padding: 20px;
         }
 
         #app-screenshot {
+            flex: 1; /* Take up available space */
+        }
+
+        #app-description {
+            flex: 1; /* Take up available space */
+            padding: 0 20px; /* Add spacing around the description */
+            text-align: left; /* Align text to the left within the description */
+        }
+
+        #app-screenshot img {
             max-width: 100%;
             height: auto;
         }
@@ -46,24 +59,33 @@
         <p>Your iOS App for Counting Dice Rolls</p>
     </header>
 
-    <div id="app-description">
-        <h2>About Dice Counter</h2>
-        <p>
-            Dice Count is the ultimate tool for tabletop gamers. Whether you're playing board games, role-playing games, or just need to keep track of dice rolls, Dice Count has you covered.
-        </p>
-        <p>
-            Features:
-            <ul>
-                <li>Easy-to-use interface</li>
-                <li>Count and record dice rolls</li>
-                <li>Insights and averages</li>
-            </ul>
-        </p>
+<div id="app-container">
+        <div id="app-screenshot">
+            <img src="count-screenshot-cropped.jpg" alt="Dice Count App Screenshot">
+        </div>
+
+        <div id="app-description">
+            <h2>About Dice Counter</h2>
+            <p>
+                Dice Count is the ultimate tool for tabletop gamers. Whether you're playing board games, role-playing games, or just need to keep track of dice rolls, Dice Count has you covered.
+            </p>
+            <p>
+When playing games you can track the rolled dice and see the averages in your current game compared to the overall average.
+
+Are you always unlucky in dice games? But do your friends/family never believe you? Prove it by tracking the dice counts and seeing the averages.
+            </p>
+            <p>
+                Features:
+                <ul>
+                    <li>Easy-to-use interface</li>
+                    <li>Count and record dice rolls</li>
+                    <li>Insights and averages</li>
+                </ul>
+            </p>
+        </div>
     </div>
 
-    <div id="app-screenshot">
-        <img src="count-screenshot-cropped.jpg" alt="Dice Count App Screenshot">
-    </div>
+    
 
     <footer>
         <p>&copy; 2023 Dice Counter</p>
